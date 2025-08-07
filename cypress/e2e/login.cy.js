@@ -8,8 +8,8 @@ describe('Testes de Login - Swag Labs', () => {
   });
 
   it('TC-LOGIN-001 - Autenticação com usuário válido', () => {
-    cy.get('[data-test="username"]').type('standard_user'); // insere username ** é esperadoa
-    cy.get('[data-test="password"]').type('secret_sauce');   // insere senha
+    cy.get('#user-name').type('standard_user'); // insere username ** é esperadoa
+    cy.get('#password').type('secret_sauce');   // insere senha
     cy.get('#login-button').click();            // clica no botão de login
     // cy.url().should('include', '/inventory.html'); // verifica redirecionamento maneira ideal
     cy.get('.product_label').should('contain', 'Products'); // verifica se fez o redirecionamento
